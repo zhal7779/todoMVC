@@ -1,30 +1,25 @@
 import { defineStore } from "pinia";
 
-export const useRootStore = defineStore("root", {
-  id: "root",
-
-  //state
+export const useStore = defineStore("root", {
   state: () => ({
-    arr: [],
+    todoList: [],
   }),
-
-  //getters
-  getters: {
-    getCount(state) {
-      return state.arr;
-    },
-  },
-
-  //actions
+  // getters: {
+  //   getState(state) {
+  //     return state.arr;
+  //   },
+  // },
   actions: {
     addArr(newText) {
-      this.arr((prevArr) => [...prevArr, newText]);
+      this.todoList.push(newText);
     },
     removeArr(removeText) {
-      this.arr.filter((text) => text === removeText);
+      this.todoList = this.todoList.filter(
+        (prevText) => prevText !== removeText
+      );
     },
     initArr() {
-      this.arr = [];
+      this.todoList = [];
     },
   },
 });
