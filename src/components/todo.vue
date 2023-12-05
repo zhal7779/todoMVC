@@ -1,15 +1,15 @@
 <script setup>
-import { ref } from "vue";
-import { useStore } from "../store/store";
+import { ref } from 'vue';
+import { useStore } from '../store/store';
 
-const text = ref("");
+const text = ref('');
 const store = useStore();
 
-const { addArr } = store;
+const { addList } = store;
 
 const addData = () => {
-  addArr(text.value);
-  text.value = "";
+  addList(text.value);
+  text.value = '';
 };
 </script>
 
