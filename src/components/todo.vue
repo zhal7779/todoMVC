@@ -1,9 +1,23 @@
 <script setup>
 import { ref } from "vue";
+
+const text = ref("");
+
+const addData = () => {
+  console.log(text.value);
+};
 </script>
 
 <template>
-  <div><input placeholder="What needs to be done?" autofocus /></div>
+  <div>
+    <input
+      type="text"
+      v-model="text"
+      @keyup.enter="addData"
+      placeholder="What needs to be done?"
+      autofocus
+    />
+  </div>
 </template>
 
 <style scoped>

@@ -36,15 +36,18 @@ main {
 }
 
 header {
+  margin-top: 1.8rem;
   display: block;
   position: relative;
 }
 header > h1 {
   font-size: 100px;
+  font-weight: 500;
   color: rgba(175, 47, 47, 0.15);
 }
 footer > p {
   color: #bfbfbf;
   font-size: 10px;
+  margin: 10px 0;
 }
 </style>
